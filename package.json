@@ -1,0 +1,20 @@
+{
+  "name": "sheepshead-webapp",
+  "version": "1.0.0",
+  "description": "A web client for Sheepshead",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Michael McDermott",
+  "license": "MIT",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-static": "^2.0.0",
+    "winston": "^2.2.0"
+  }
+}

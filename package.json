@@ -5,21 +5,26 @@
   "main": "server.js",
   "scripts": {
     "build-sass": "node-sass sass -o static/css/",
-    "build-materialize": ""
+    "install": "gulp"
   },
   "author": "Michael McDermott",
   "license": "MIT",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/michaeljmcd/sheepshead-webapp.git"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
     "mocha": "^2.4.5",
     "node-sass": "^3.7.0",
     "nodemon": "^1.9.2"
   },
   "dependencies": {
+    "bower": "^1.7.9",
+    "browserify": "^13.0.1",
+    "gulp-bower": "0.0.13",
     "koa": "^1.2.0",
     "koa-static": "^2.0.0",
     "materialize-css": "^0.97.6",

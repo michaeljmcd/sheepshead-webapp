@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build-sass": "node-sass sass -o static/css/",
-    "install": "gulp"
+    "build-bower": "bower install",
+    "install": "npm run build-sass && npm run build-sass"
   },
   "author": "Michael McDermott",
   "license": "MIT",
@@ -15,8 +16,6 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "gulp": "^3.9.1",
-    "gulp-browserify": "^0.5.1",
     "mocha": "^2.4.5",
     "node-sass": "^3.7.0",
     "nodemon": "^1.9.2"

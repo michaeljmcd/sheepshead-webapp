@@ -6,7 +6,7 @@
   "scripts": {
     "build-sass": "node-sass sass -o static/css/",
     "build-bower": "bower install",
-    "compile-js": "uglifyjs client/*.js --compress --mangle -o static/sheepshead.js",
+    "compile-js": "uglifyjs client/*.js --compress --mangle -o static/sheepshead.js --source-map static/sheepshead.map",
     "install": "npm run build-sass && npm run build-bower"
   },
   "author": "Michael McDermott",

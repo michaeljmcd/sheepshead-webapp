@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "build-sass": "node-sass sass -o static/css/",
-    "build-bower": "bower install",
-    "compile-js": "uglifyjs client/*.js --compress --mangle -o static/sheepshead.js --source-map static/sheepshead.map",
-    "install": "npm run build-sass && npm run build-bower"
+    "build-client": "cd client && polymer build && cd ..",
+    "prepare-static": "cp -r client/build/bundled/* static/ && cp -r client/bower_components static/",
+    "install": "npm run build-client && npm run prepare-static"
   },
   "author": "Michael McDermott",
   "license": "MIT",

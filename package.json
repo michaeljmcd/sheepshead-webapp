@@ -6,8 +6,7 @@
   "scripts": {
     "build-sass": "node-sass sass -o static/css/",
     "build-client": "cd client && polymer build && cd ..",
-    "prepare-static": "cp -r client/build/bundled/* static/ && cp -r client/bower_components static/",
-    "install": "npm run build-client && npm run prepare-static"
+    "install": "npm run build-client"
   },
   "author": "Michael McDermott",
   "license": "MIT",
@@ -25,6 +24,7 @@
     "bower": "^1.7.9",
     "browserify": "^13.0.1",
     "koa": "^1.2.0",
+    "koa-mount": "^1.3.0",
     "koa-static": "^2.0.0",
     "uglify-js": "^2.7.0",
     "winston": "^2.2.0"

@@ -1,5 +1,6 @@
 var koa = require('koa'),
     koaStatic = require('koa-static'),
+    mount = require('koa-mount'),
     winston = require('winston'),
     passport = require('passport'),
     config = require('config'),
@@ -12,11 +13,10 @@ app.on('error', function(error) {
     winston.error(error);
 });
 
-app.use(koaStatic(__dirname + '/static'));
+app.use(mount('/bower_components', koaStatic(__dirname + '/client/bower_components')));
+app.use(mount('/bower_components', koaStatic(__dirname + '/client/build/bundled')));
 
 // Configure API gateway calls
-
-//app.post('/login', passport
 
 if (!module.parent) {
     winston.info('Starting up Sheepshead Web Application Instance on port %d', port);
